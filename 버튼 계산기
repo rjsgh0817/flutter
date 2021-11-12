@@ -24,7 +24,7 @@ class WidgetApp extends StatefulWidget {
 }
 
 class _WidgetExampleState extends State<WidgetApp> {
-  List _buttonList = ['더하기', '빼기', '곱하기', '나누기'];
+  List _buttonList = ['더하기', '빼기', '곱하기', '나누기','건호'];
   List<DropdownMenuItem<String>> _dropdownMenuItems = new List.empty(growable:  true);
   String? _buttonText;
   String sum = '';
@@ -89,6 +89,8 @@ class _WidgetExampleState extends State<WidgetApp> {
     result = value1Int * value2Int;
     } else if (_buttonText == '나누기') {
     result = value1Int / value2Int;
+    } else if (_buttonText == '건호') {
+      result = value1Int % value2Int;
     }  //사칙연산
     sum = '$result';
     });
